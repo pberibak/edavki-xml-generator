@@ -1,0 +1,19 @@
+# install homebrew and python
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install python
+
+# check if python installed
+python3 --version
+
+# create virtual env
+python3 -m venv myenv
+
+# activate virtual env
+source .venv/bin/activate
+
+# install required libs
+pip install -r requirements.txt
+
+# tool usage
+python3 xlsx_to_xml.py --xlsx_input ./<input_file_name> --xml_output ./<output_file_name>
+
